@@ -18,7 +18,7 @@ class Chef
           ui.color('Comment', :bold),
         ]
 
-        @connection["cluster/resources?type=pool"].get @auth_params do |response, request, result, &block|
+        @connection["cluster/resources?type=pools"].get @auth_params do |response, request, result, &block|
           pool_index = 1
 
           JSON.parse(response.body)['data'].each { |entry|
