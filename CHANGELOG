@@ -1,5 +1,9 @@
-Author: Jorge Moratilla, Adam Enger
+Author: Jorge Moratilla, Adam Enger, Simon Vass
 Date: 2012-10-07
+
+[2014-02-10]
+Version: 0.0.21
+* Added support for knife proxmox pool list command.
 
 [2013-10-05]
 Version: 0.0.20
