@@ -15,10 +15,10 @@ class Chef
         pool_list = [
           ui.color('#', :bold),
           ui.color('Pool ID', :bold),
-          ui.color('Comment', :bold),
+          ui.color('Comment', :bold)
         ]
 
-        @connection["cluster/resources?type=pools"].get @auth_params do |response, request, result, &block|
+        @connection["/pools/"].get @auth_params do |response, request, result, &block|
           pool_index = 1
 
           JSON.parse(response.body)['data'].each { |entry|
@@ -28,7 +28,7 @@ class Chef
             pool_index+=1
           }
         end
-        puts ui.list(pool_list, :uneven_columns_across, 6)
+        puts ui.list(pool_list, :uneven_columns_across, 3)
       end
     end
   end
