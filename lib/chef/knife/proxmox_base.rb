@@ -244,6 +244,17 @@ class Chef
         end
       end
       
+      
+      def pool_info(poolid, field)
+        @connection["pools/#{poolid}"].get @auth_params do |response, request, result, &block|
+          if field == 'all'
+            JSON.parse(response.body)['data']
+          else
+            JSON.parse(response.body)['data'][field]
+          end
+        end
+      end
+      
     end # module
   end # class 
 end # class
