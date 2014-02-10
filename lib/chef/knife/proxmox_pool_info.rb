@@ -3,7 +3,7 @@ require 'chef/knife/proxmox_base'
 
 class Chef
   class Knife
-    class ProxmoxVmInfo < Knife
+    class ProxmoxPoolInfo < Knife
 
       include Knife::ProxmoxBase
 
