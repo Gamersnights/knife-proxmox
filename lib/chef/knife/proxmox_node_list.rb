@@ -22,7 +22,7 @@ class Chef
         ]
 
         @connection["cluster/resources?type=node"].get @auth_params do |response, request, result, &block|
-          node_index = 1
+          node_index = 0
 
           JSON.parse(response.body)['data'].each { |entry|
             node_list << node_index.to_s
